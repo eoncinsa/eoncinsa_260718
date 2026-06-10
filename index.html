@@ -1,0 +1,1012 @@
+<!-- All texts are preliminary -->
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="제1회 언어학에 진심인 사람들 포럼 안내 홈페이지: 발표 일정, 장소, 참가비, 오시는 길, 입장 시간, 문의 안내" />
+  <title>제1회 언어학에 진심인 사람들 포럼</title>
+  <style>
+    :root {
+      --bg: #f7f5f1;
+      --paper: #fffdf8;
+      --ink: #1f2933;
+      --muted: #64748b;
+      --line: #ded7cb;
+      --accent: #5b5fc7;
+      --accent-dark: #3538a3;
+      --accent-soft: #ececff;
+      --warm: #9a6b2f;
+      --warm-soft: #f6ead7;
+      --green-soft: #e8f3ed;
+      --shadow: 0 18px 45px rgba(31, 41, 51, 0.08);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(91, 95, 199, 0.13), transparent 34rem),
+        radial-gradient(circle at top right, rgba(154, 107, 47, 0.13), transparent 30rem),
+        var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR",
+        "Malgun Gothic", "Segoe UI", sans-serif;
+      line-height: 1.65;
+      word-break: keep-all;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+      background: rgba(247, 245, 241, 0.82);
+      border-bottom: 1px solid rgba(222, 215, 203, 0.75);
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.85rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.35rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.92rem;
+      color: var(--muted);
+      padding: 0.42rem 0.72rem;
+      border-radius: 999px;
+    }
+
+    .nav-links a:hover {
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+    }
+
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2.2rem 1.25rem 4rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
+      gap: 1.5rem;
+      align-items: stretch;
+      margin-top: 1rem;
+    }
+
+    .hero-card,
+    .info-card,
+    .section-card {
+      background: rgba(255, 253, 248, 0.92);
+      border: 1px solid rgba(222, 215, 203, 0.9);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: clamp(1.5rem, 4vw, 3rem);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      width: 15rem;
+      height: 15rem;
+      border-radius: 999px;
+      right: -5rem;
+      bottom: -6rem;
+      background: linear-gradient(135deg, rgba(91, 95, 199, 0.15), rgba(154, 107, 47, 0.12));
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.28rem 0.72rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 4.8rem);
+      line-height: 1.04;
+      letter-spacing: -0.08em;
+      margin: 0 0 1rem;
+    }
+
+    .subtitle {
+      font-size: clamp(1.02rem, 2vw, 1.28rem);
+      color: #445466;
+      max-width: 42rem;
+      margin: 0 0 1.35rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 1.3rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      min-height: 2.75rem;
+      padding: 0.65rem 1rem;
+      border-radius: 999px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid transparent;
+    }
+
+    .button.primary {
+      color: white;
+      background: var(--accent);
+      box-shadow: 0 12px 24px rgba(91, 95, 199, 0.22);
+    }
+
+    .button.primary:hover {
+      background: var(--accent-dark);
+    }
+
+    .button.secondary {
+      color: var(--ink);
+      background: white;
+      border-color: var(--line);
+    }
+
+    .button.secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent-dark);
+    }
+
+    .info-card {
+      padding: 1.25rem;
+      display: grid;
+      gap: 0.85rem;
+      align-content: center;
+    }
+
+    .info-item {
+      padding: 1rem;
+      border-radius: 18px;
+      background: #faf7ef;
+      border: 1px solid rgba(222, 215, 203, 0.75);
+    }
+
+    .info-label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .info-value {
+      font-size: 1.1rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+    }
+
+    section {
+      margin-top: 2rem;
+    }
+
+    .section-card {
+      padding: clamp(1.2rem, 3vw, 2rem);
+    }
+
+    .section-heading {
+      margin: 0 0 0.35rem;
+      font-size: clamp(1.35rem, 3vw, 2rem);
+      letter-spacing: -0.05em;
+    }
+
+    .section-lead {
+      margin: 0 0 1.2rem;
+      color: var(--muted);
+    }
+
+    .track-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .track {
+      padding: 1rem;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fffaf1;
+    }
+
+    .track:nth-child(2) {
+      background: var(--accent-soft);
+    }
+
+    .track:nth-child(3) {
+      background: var(--green-soft);
+    }
+
+    .track h3 {
+      margin: 0 0 0.45rem;
+      letter-spacing: -0.04em;
+    }
+
+    .keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.75rem;
+    }
+
+    .keyword {
+      display: inline-flex;
+      padding: 0.22rem 0.52rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid rgba(31, 41, 51, 0.08);
+      font-size: 0.82rem;
+      color: #475569;
+      font-weight: 700;
+    }
+
+    .schedule {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .slot {
+      display: grid;
+      grid-template-columns: 8.3rem minmax(0, 1fr);
+      gap: 1rem;
+      padding: 1rem;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: white;
+    }
+
+    .slot.special {
+      background: var(--warm-soft);
+      border-color: rgba(154, 107, 47, 0.25);
+    }
+
+    .slot.break {
+      background: #efeffb;
+      border-color: rgba(91, 95, 199, 0.2);
+    }
+
+    .time {
+      font-weight: 900;
+      color: var(--accent-dark);
+      white-space: nowrap;
+    }
+
+    .slot.special .time {
+      color: var(--warm);
+    }
+
+    .slot-title {
+      margin: 0;
+      font-size: 1.05rem;
+      letter-spacing: -0.03em;
+    }
+
+    .slot-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.45rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.52rem;
+      border-radius: 999px;
+      background: #f1f5f9;
+      color: #475569;
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .part-label {
+      margin: 1.4rem 0 0.65rem;
+      padding: 0.75rem 1rem;
+      border-radius: 16px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+    }
+
+    .part-label:first-child {
+      margin-top: 0;
+    }
+
+    .notice-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .notice {
+      padding: 1rem;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: white;
+    }
+
+    .notice strong {
+      display: block;
+      margin-bottom: 0.3rem;
+      letter-spacing: -0.03em;
+    }
+
+    .fee-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .fee-card {
+      position: relative;
+      overflow: hidden;
+      padding: 1.25rem;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: white;
+    }
+
+    .fee-card::after {
+      content: "";
+      position: absolute;
+      width: 7rem;
+      height: 7rem;
+      right: -3.6rem;
+      bottom: -3.6rem;
+      border-radius: 999px;
+      background: rgba(91, 95, 199, 0.11);
+      pointer-events: none;
+    }
+
+    .fee-card:nth-child(2)::after {
+      background: rgba(154, 107, 47, 0.13);
+    }
+
+    .fee-card:nth-child(3)::after {
+      background: rgba(42, 122, 87, 0.12);
+    }
+
+    .fee-label {
+      display: block;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 900;
+      margin-bottom: 0.45rem;
+    }
+
+    .fee-price {
+      display: block;
+      font-size: clamp(1.75rem, 4vw, 2.55rem);
+      line-height: 1.05;
+      font-weight: 950;
+      letter-spacing: -0.07em;
+      color: var(--accent-dark);
+    }
+
+    .fee-desc {
+      margin: 0.65rem 0 0;
+      color: #475569;
+      font-size: 0.95rem;
+    }
+
+    .fee-note {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 16px;
+      background: #f8fafc;
+      border: 1px solid rgba(222, 215, 203, 0.85);
+      color: #475569;
+    }
+
+    .directions-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+      gap: 1.25rem;
+      align-items: start;
+    }
+
+    .route-panel,
+    .map-panel {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: white;
+    }
+
+    .route-panel {
+      padding: 1.1rem;
+    }
+
+    .address-box {
+      padding: 1rem;
+      border-radius: 16px;
+      background: var(--warm-soft);
+      border: 1px solid rgba(154, 107, 47, 0.25);
+      margin-bottom: 1rem;
+    }
+
+    .address-box strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      letter-spacing: -0.03em;
+    }
+
+    .route-list {
+      counter-reset: route;
+      list-style: none;
+      display: grid;
+      gap: 0.75rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .route-list li {
+      counter-increment: route;
+      position: relative;
+      padding: 0.95rem 0.95rem 0.95rem 3.05rem;
+      border-radius: 16px;
+      border: 1px solid rgba(222, 215, 203, 0.9);
+      background: #fffaf1;
+    }
+
+    .route-list li::before {
+      content: counter(route);
+      position: absolute;
+      left: 0.95rem;
+      top: 1rem;
+      width: 1.45rem;
+      height: 1.45rem;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 900;
+    }
+
+    .route-list strong {
+      display: block;
+      margin-bottom: 0.18rem;
+      letter-spacing: -0.03em;
+    }
+
+    .transport-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 1rem;
+    }
+
+    .transport-tag {
+      display: inline-flex;
+      padding: 0.24rem 0.58rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-size: 0.84rem;
+      font-weight: 850;
+    }
+
+    .map-panel {
+      padding: 0.75rem;
+    }
+
+    .map-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      border: 1px solid rgba(222, 215, 203, 0.9);
+    }
+
+    .map-caption {
+      margin: 0.65rem 0.2rem 0.15rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 860px) {
+      .hero,
+      .track-grid,
+      .notice-grid,
+      .fee-grid,
+      .directions-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      .slot {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+      }
+    }
+
+    @media print {
+      .site-header,
+      .hero-actions {
+        display: none;
+      }
+
+      body {
+        background: white;
+      }
+
+      main {
+        max-width: none;
+        padding: 0;
+      }
+
+      .hero-card,
+      .info-card,
+      .section-card,
+      .slot {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="주요 메뉴">
+      <div class="brand">제1회 언어학에 진심인 사람들 포럼</div>
+      <div class="nav-links">
+        <a href="#about">개요</a>
+        <a href="#venue">장소</a>
+        <a href="#fee">참가비</a>
+        <a href="#directions">오시는 길</a>
+        <a href="#schedule">일정</a>
+        <a href="#topics">분류</a>
+        <a href="#notice">안내</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-card">
+        <div class="eyebrow">2026-07-18 / 14:00-17:55</div>
+        <h1>제1회<br />언어학에 진심인 사람들 포럼</h1>
+        <p class="subtitle">
+          역사비교언어학과 언어기술에서 출발해 형태론과 통사론 등 이론언어학의 문제를 살펴본 뒤,
+          수어와 시각언어의 양식적 특성으로 확장하는 포럼입니다.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#schedule">전체 일정 보기</a>
+          <a class="button secondary" href="#fee">참가비 보기</a>
+          <a class="button secondary" href="#directions">오시는 길 보기</a>
+        </div>
+      </div>
+
+      <aside class="info-card" aria-label="행사 요약">
+        <div class="info-item">
+          <span class="info-label">일시</span>
+          <span class="info-value">14:00–17:55</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">입장</span>
+          <span class="info-value">13:50부터 가능</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">장소</span>
+          <span class="info-value">망고모임공간</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">참가비</span>
+          <span class="info-value">성인 1만원 · 미성년자/비대면 5천원</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">구성</span>
+          <span class="info-value">발표 6개 · 3부 구성</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">운영</span>
+          <span class="info-value">발표 25분 · 부별 Q&amp;A 15분</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">휴식</span>
+          <span class="info-value">각 부 사이 15분</span>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about" class="section-card">
+      <h2 class="section-heading">포럼 개요</h2>
+      <p class="section-lead">
+        이번 포럼은 다양한 언어 자료와 언어학적 방법론을 한 자리에서 공유하기 위해 구성되었습니다.
+        발표 순서는 <strong>개별 언어 자료와 언어 기술</strong>에서 시작하여
+        <strong>이론언어학</strong>의 핵심 문제를 다룬 뒤, 마지막으로 <strong>수어와 언어 양식</strong>을 비교하는 흐름입니다.
+      </p>
+    </section>
+
+    <section id="venue" class="section-card">
+      <h2 class="section-heading">장소 및 시간 안내</h2>
+      <div class="notice-grid">
+        <div class="notice">
+          <strong>장소</strong>
+          망고모임공간
+        </div>
+        <div class="notice">
+          <strong>주소</strong>
+          서울특별시 서초구 서초대로77길 9 9층
+        </div>
+        <div class="notice">
+          <strong>입장 가능 시간</strong>
+          오후 1시 50분부터 입장할 수 있습니다.
+        </div>
+      </div>
+    </section>
+
+    <section id="fee" class="section-card">
+      <h2 class="section-heading">참가비 안내</h2>
+      <p class="section-lead">참가 유형에 따라 아래 금액으로 운영됩니다.</p>
+
+      <div class="fee-grid">
+        <article class="fee-card">
+          <span class="fee-label">성인 참가</span>
+          <span class="fee-price">10,000원</span>
+          <p class="fee-desc">현장 참석 성인 참가자 기준입니다.</p>
+        </article>
+
+        <article class="fee-card">
+          <span class="fee-label">미성년자 참가</span>
+          <span class="fee-price">5,000원</span>
+          <p class="fee-desc">현장 참석 미성년자 참가자 기준입니다.</p>
+        </article>
+
+        <article class="fee-card">
+          <span class="fee-label">비대면 참가</span>
+          <span class="fee-price">5,000원</span>
+          <p class="fee-desc">온라인으로 참여하는 참가자 기준입니다.</p>
+        </article>
+      </div>
+
+      <div class="fee-note">
+        참가비 납부와 비대면 접속 관련 세부 안내는 신청자에게 별도로 안내됩니다.
+      </div>
+    </section>
+
+    <section id="directions" class="section-card">
+      <h2 class="section-heading">오시는 길</h2>
+      <p class="section-lead">
+        행사장은 강남역 인근의 망고모임공간입니다. 아래 지도에서 빨간 핀으로 표시된 위치를 확인해 주세요.
+      </p>
+
+      <div class="directions-layout">
+        <div class="route-panel">
+          <div class="address-box">
+            <strong>도착지</strong>
+            서울특별시 서초구 서초대로77길 9 9층 · 망고모임공간
+          </div>
+
+          <ol class="route-list">
+            <li>
+              <strong>강남역에서 하차</strong>
+              지하철 2호선 또는 신분당선 강남역에서 내려 10번·11번 출구 방향으로 이동합니다.
+            </li>
+            <li>
+              <strong>10번 출구 이용 권장</strong>
+              지도상으로는 10번 출구가 행사장과 가장 가깝습니다. 출구로 나온 뒤 서초대로77길 안쪽의 “강남 스터디룸 망고모임공간” 표시 방향으로 이동합니다.
+            </li>
+            <li>
+              <strong>건물 9층으로 이동</strong>
+              주소지 건물에 도착하면 엘리베이터를 이용해 9층 망고모임공간으로 올라오시면 됩니다.
+            </li>
+          </ol>
+        </div>
+        <figure class="map-panel">
+          <img class="map-image" src="mango-location-map.jpg" alt="강남역 주변 망고모임공간 위치 지도" />
+          <figcaption class="map-caption">
+            강남역 10번 출구 인근에 표시된 망고모임공간 위치 안내 지도입니다.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="topics" class="section-card">
+      <h2 class="section-heading">발표 분류</h2>
+      <p class="section-lead">각 부는 발표 주제의 학문적 성격과 논의 흐름을 기준으로 묶었습니다.</p>
+
+      <div class="track-grid">
+        <article class="track">
+          <h3>1부 · 개별 언어 자료와 언어 기술</h3>
+          <p>역사비교언어학, 문헌학, 사전학, 기술언어학을 중심으로 구체적 언어 자료를 다룹니다.</p>
+          <div class="keywords">
+            <span class="keyword">역사비교언어학</span>
+            <span class="keyword">문헌학</span>
+            <span class="keyword">사전학</span>
+            <span class="keyword">기술언어학</span>
+          </div>
+        </article>
+
+        <article class="track">
+          <h3>2부 · 이론언어학</h3>
+          <p>형태론, 통사론, 심리언어학의 관점에서 언어 구조와 언어 처리의 문제를 살핍니다.</p>
+          <div class="keywords">
+            <span class="keyword">형태론</span>
+            <span class="keyword">음운론</span>
+            <span class="keyword">통사론</span>
+            <span class="keyword">심리언어학</span>
+            <span class="keyword">언어 처리</span>
+          </div>
+        </article>
+
+        <article class="track">
+          <h3>3부 · 수어와 언어 양식</h3>
+          <p>수어, 시각언어, 분류사, 동시성을 통해 언어 양식의 차이와 공통점을 비교합니다.</p>
+          <div class="keywords">
+            <span class="keyword">수어학</span>
+            <span class="keyword">수어음운론</span>
+            <span class="keyword">수어음성학</span>
+            <span class="keyword">분류사</span>
+            <span class="keyword">동시성</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="schedule" class="section-card">
+      <h2 class="section-heading">시간표</h2>
+      <p class="section-lead">발표는 각 25분, 질의응답은 각 부가 끝난 뒤 15분씩 진행됩니다.</p>
+
+      <div class="schedule">
+        <article class="slot special">
+          <div class="time">14:00–14:05</div>
+          <div>
+            <h3 class="slot-title">개회 및 일정 안내</h3>
+            <div class="slot-meta">
+              <span class="pill">행사</span>
+              <span class="pill">5분</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="part-label">1부 · 개별 언어 자료와 언어 기술</div>
+
+        <article class="slot">
+          <div class="time">14:05–14:30</div>
+          <div>
+            <h3 class="slot-title">문어 여진어 및 여진어파 언어들의 부정어/보빈의 거란어 내 한국어족 차용어 논문에 대한 고찰</h3>
+            <p>to appear</p>
+            <div class="slot-meta">
+              <span class="pill">발표 25분</span>
+              <span class="pill">역사비교언어학</span>
+              <span class="pill">문헌학</span>
+              <span class="pill">국어사</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="slot">
+          <div class="time">14:30–14:55</div>
+          <div>
+            <h3 class="slot-title">현 나바호어 사전의 개선 방안</h3>
+            <p>to appear</p>
+            <div class="slot-meta">
+              <span class="pill">발표 25분</span>
+              <span class="pill">사전학</span>
+              <span class="pill">기술언어학</span>
+              <span class="pill">형태론</span>
+              <span class="pill">의미론</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="slot special">
+          <div class="time">14:55–15:10</div>
+          <div>
+            <h3 class="slot-title">1부 종합 질의응답</h3>
+            <div class="slot-meta">
+              <span class="pill">Q&amp;A 15분</span>
+              <span class="pill">1부 전체</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="slot break">
+          <div class="time">15:10–15:25</div>
+          <div>
+            <h3 class="slot-title">휴식</h3>
+            <div class="slot-meta">
+              <span class="pill">15분</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="part-label">2부 · 이론언어학</div>
+
+        <article class="slot">
+          <div class="time">15:25–15:50</div>
+          <div>
+            <h3 class="slot-title"><i>Non-Concatenative Morphology and Static Distribution in Arabic Dialects</i></h3>
+            <p>to appear</p>
+            <div class="slot-meta">
+              <span class="pill">발표 25분</span>
+              <span class="pill">형태론</span>
+              <span class="pill">이론음운론</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="slot">
+          <div class="time">15:50–16:15</div>
+          <div>
+            <h3 class="slot-title"><i>Cue Competition in Korean Sentence Processing: Effects of Scrambling and Case Marking Attenuation</i></h3>
+            <p>to appear</p>
+            <div class="slot-meta">
+              <span class="pill">발표 25분</span>
+              <span class="pill">통사론</span>
+              <span class="pill">심리언어학</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="slot special">
+          <div class="time">16:15–16:30</div>
+          <div>
+            <h3 class="slot-title">2부 종합 질의응답</h3>
+            <div class="slot-meta">
+              <span class="pill">Q&amp;A 15분</span>
+              <span class="pill">2부 전체</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="slot break">
+          <div class="time">16:30–16:45</div>
+          <div>
+            <h3 class="slot-title">휴식</h3>
+            <div class="slot-meta">
+              <span class="pill">15분</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="part-label">3부 · 수어와 언어 양식</div>
+
+        <article class="slot">
+          <div class="time">16:45–17:10</div>
+          <div>
+            <h3 class="slot-title">수화언어의 분류사와 오스트레일리아 원주민 언어의 동사 분류사 비교: 한국 수어와 아닌딜랴콰어를 중심으로</h3>
+            <p>to appear</p>
+            <div class="slot-meta">
+              <span class="pill">발표 25분</span>
+              <span class="pill">수어학</span>
+              <span class="pill">언어유형론</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="slot">
+          <div class="time">17:10–17:35</div>
+          <div>
+            <h3 class="slot-title">수어의 비선형성 및 동시성: 자질, 음소, 형태소, 단어 수준에서 나타나는 수어의 동시표현 현상</h3>
+            <p>to appear</p>
+            <div class="slot-meta">
+              <span class="pill">발표 25분</span>
+              <span class="pill">수어음운론</span>
+              <span class="pill">수어음성학</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="slot special">
+          <div class="time">17:35–17:50</div>
+          <div>
+            <h3 class="slot-title">3부 종합 질의응답</h3>
+            <div class="slot-meta">
+              <span class="pill">Q&amp;A 15분</span>
+              <span class="pill">3부 전체</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="slot special">
+          <div class="time">17:50–17:55</div>
+          <div>
+            <h3 class="slot-title">폐회 및 마무리 안내</h3>
+            <div class="slot-meta">
+              <span class="pill">행사</span>
+              <span class="pill">5분</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="notice" class="section-card">
+      <h2 class="section-heading">운영 안내</h2>
+      <div class="notice-grid">
+        <div class="notice">
+          <strong>발표 시간</strong>
+          각 발표는 25분으로 진행합니다.
+        </div>
+        <div class="notice">
+          <strong>질의응답</strong>
+          질의응답은 각 부가 끝난 뒤 15분 동안 종합적으로 진행합니다.
+        </div>
+        <div class="notice">
+          <strong>휴식</strong>
+          1부와 2부 종료 후 각각 15분의 휴식 시간이 있습니다.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    제1회 언어학에 진심인 사람들 포럼 · 안내 홈페이지<br />
+    문의사항: <a href="mailto:eonjinsa@gmail.com">eonjinsa@gmail.com</a>
+  </footer>
+</body>
+</html>
