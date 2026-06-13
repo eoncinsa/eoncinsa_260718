@@ -8,4 +8,4 @@
 - 운영 안내
 
 ## 주소
-http://www.encinsa.kro.kr/
+https://encinsa.github.io/encinsa_260718/
