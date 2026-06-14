@@ -635,6 +635,30 @@
       object-fit: cover;
     }
 
+    .chapter[data-panel="intro"] {
+      grid-template-rows: auto minmax(0, 1fr);
+      align-content: stretch;
+    }
+
+    .linguistics-card {
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: #e2e8f0;
+    }
+
+    .linguistics-card img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
     .map-card figcaption,
     .map-fallback {
       padding: 12px 14px;
@@ -760,6 +784,14 @@
         padding: 24px;
       }
 
+      .chapter[data-panel="intro"] {
+        grid-template-rows: auto minmax(320px, 1fr);
+      }
+
+      .linguistics-card {
+        min-height: 320px;
+      }
+
       .summary-grid,
       .fee-grid,
       .route-layout,
@@ -801,6 +833,11 @@
       .route-card,
       .notice-card {
         padding: 18px;
+      }
+
+
+      .linguistics-card {
+        min-height: 280px;
       }
     }
 
@@ -881,9 +918,10 @@
          
 
           </div>
-<figure class="map-card">
-          <img src="assets/linguistics.png" alt="assets/linguistics">
-<figure>
+
+          <figure class="linguistics-card" aria-label="언어학 포럼 이미지">
+            <img src="assets/linguistics.png" alt="언어학 포럼 이미지" />
+          </figure>
         </article>
 
         <article class="chapter" data-panel="schedule" role="tabpanel" hidden>
